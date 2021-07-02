@@ -1,7 +1,7 @@
 //S
 const hackerSpeak = (str) => {
   replacement = {
-    "a": 0,
+    "a": "0",
     "e": 1,
     "i": 2,
     "o": 3,
