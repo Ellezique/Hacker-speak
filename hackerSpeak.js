@@ -2,19 +2,23 @@
 const hackerSpeak = (str) => {
   replacement = {
     "a": "0",
+    "A": "0",
     "e": 1,
+    "E": 1,
     "i": 2,
+    "I": 2,
     "o": 3,
-    "u": 4
+    "O": 3,
+    "u": 4,
+    "U": 4
   }
-  let lowerstr = str.toLowerCase()
   for (index = 0; index < str.length; index += 1) {
-    if (replacement[lowerstr[index]]) {
-      lowerstr = lowerstr.replace(lowerstr[index], replacement[lowerstr[index]]);
+    if (replacement[str[index]]) {
+      str = str.replace(str[index], replacement[str[index]]);
     }
   }
-  console.log(lowerstr)
-  return(lowerstr)
+  console.log(str)
+  return(str)
 }
 
 hackerSpeak("Ha ha ha"); // returns  H0 h0 h0
