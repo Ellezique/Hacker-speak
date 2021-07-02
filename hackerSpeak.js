@@ -1,6 +1,6 @@
-//S
 const hackerSpeak = (str) => {
   replacement = {
+    // string character to match: replacement number
     "a": "0",
     "A": "0",
     "e": 1,
@@ -12,13 +12,16 @@ const hackerSpeak = (str) => {
     "u": 4,
     "U": 4
   }
+  //for each character in the string (identify each character by its index position)
   for (index = 0; index < str.length; index += 1) {
+    //if the character at the current string index matches a character from the replacement list
     if (replacement[str[index]]) {
+      //replace that character with the replacement number at the same string index
       str = str.replace(str[index], replacement[str[index]]);
     }
   }
   console.log(str)
-  return(str)
+  return (str)
 }
 
 hackerSpeak("Ha ha ha"); // returns  H0 h0 h0
